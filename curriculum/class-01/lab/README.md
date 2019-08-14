@@ -21,7 +21,17 @@ Things we want to be able to validate
 
 * Is the entity itself the right type (array, object, function etc)
 * All all "required" properties present and do they have values?
+  * Input needs to be an object
+  * Rules needs to be an object too that defines the required properties
+  * and ethe expected values
 * For any property that specifies a type, does the value match that type?
+
+
+* Recommended approach:
+- Implement one numeric rule
+- Implement one type-based rule
+- Implement the required properties rule
+  - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwnProperty ;) ;)
 
 #### Testing
 *Validation Module* 

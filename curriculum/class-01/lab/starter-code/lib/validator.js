@@ -1,5 +1,6 @@
 'use strict';
 
+// Vinicio - this is similar to module.exports = {};, but you are giving it an easier to use name
 let validator = module.exports = {};
 
 /**
@@ -9,8 +10,30 @@ let validator = module.exports = {};
  * @param rules
  * @returns {boolean}
  */
+
+
+// Ideas for rules : Positive values / Negative values / odd values / even values /
+// specific values / bigger than five /
+
+// if you need to setup more complex rules, remember that rules can be an object too
 validator.isValid = (input, rules) => {
-  return true;
+  // return true;
+  if(rules === 'object') {
+    // Vinicio - how do I check if the type of the input is an object
+  }
+
+  if(rules === 'object') {
+    // I'm checking if the value is less than zero, because the user wants to
+    // check if the value is negative
+    return input < 0;
+  }
+
+  if(rules === 'one') {
+    // I'm checking if the value is less than zero, because the user wants to
+    // check if the value is negative
+    return input === 1;
+  }
+
 };
 
 /**
